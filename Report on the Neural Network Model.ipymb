@@ -1,0 +1,32 @@
+Report on the Neural Network Model
+
+Introduction:
+
+The goal of this analysis is to build and evaluate a deep learning model that can predict whether an Alphabet Soup funded charity will be successful, based on a set of features provided in a dataset. The analysis includes preprocessing of the data, building a neural network model, training and evaluating the model, and optimizing its performance. The final goal is to achieve a model with a predictive accuracy above 75%. Additionally, different model optimization strategies were explored to enhance the model’s performance.
+
+
+
+Data Preprocessing:
+
+Target Variable: The target variable for the model is IS_SUCCESSFUL, which indicates whether a charity organization is successful.
+
+Feature Variable: The features include various numerical and categorical columns that describe the characteristics of the charity organizations, such as their funding, category, and other organizational details.
+
+Removed Columns: The EIN and NAME columns were removed from the dataset as they are not relevant for predicting the success of a charity. These columns don't provide predictive power for the model.
+
+Categorical Variables: he categorical variables in the dataset, such as APPLICATION_TYPE, AFFILIATION, and CLASSIFICATION, were converted to dummy variables using pd.get_dummies(). This ensures that the model can process these categorical variables as numerical inputs.
+
+
+Model Architecture 
+
+Imput Layer: The input layer consists of the number of features in the dataset after preprocessing.
+
+Hidden Layers: Two hidden layers were used, each with 128 neurons and the ReLU activation function. This architecture was chosen based on the complexity of the data and the need for sufficient non-linearity.
+
+Output Layer: A single neuron with a sigmoid activation function.
+
+
+Summary: 
+
+The deep learning model created for this analysis showed that it can predict whether a charity is successful with reasonable accuracy.The steps taken to optimize the model included adjusting the architecture (number of neurons, layers), increasing the number of epochs, and tuning activation functions. While it didn't exceed the performance target, the model shows that further optimizations can potentially improve its accuracy.
+
